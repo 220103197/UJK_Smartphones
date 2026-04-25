@@ -457,7 +457,15 @@
     <header class="navbar-top">
         <a href="{{ route('smartphones.index') }}" class="brand">Tech<span>Shop</span></a>
 
-
+        <nav class="nav-links">
+            <a href="{{ route('smartphones.index') }}"
+                class="{{ request()->routeIs('smartphones.*') ? 'active' : '' }}">
+                <i class="bi bi-phone"></i> Smartphone
+            </a>
+            <a href="{{ route('transaksi.index') }}" class="{{ request()->routeIs('transaksi.*') ? 'active' : '' }}">
+                <i class="bi bi-receipt"></i> Transaksi
+            </a>
+        </nav>
 
         <div class="user-area">
             <span class="user-chip">
